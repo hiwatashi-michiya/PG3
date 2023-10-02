@@ -1,15 +1,34 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
+
+template <typename T>
+
+T Min(const T& a, const T& b) {
+
+	if (a < b) {
+		return a;
+	}
+
+	return b;
+
+}
+
+template <>
+char Min<char>(const char& a,const char& b) {
+
+	printf("æ•°å­—ä»¥å¤–ã®å…¥åŠ›ã¯å—ã‘ä»˜ã‘ã¾ã›ã‚“\n");
+
+	char result = ' ';
+
+	return result;
+
+}
 
 int main() {
 
-
+	printf("%d\n", Min<int>(14, 24));
+	printf("%f\n", Min<float>(25.3f, 11.2f));
+	printf("%lf\n", Min<double>(165.32f, 45.143f));
+	printf("%c\n", Min<char>('a', 'b'));
 	
-	printf("ƒRƒ“ƒ\[ƒ‹ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ğI—¹‚·‚éê‡‚Í”š‚Ì1‚ğ‰Ÿ‚µ‚ÄEnterƒL[‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
-
-	int i = 0;
-	while (i != 1) {
-		scanf_s("%d", &i);
-	}
-
 	return 0;
 }

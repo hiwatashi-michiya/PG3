@@ -2,10 +2,9 @@
 #include <time.h>
 #include <stdlib.h>
 #include <Windows.h>
+#include <functional>
 
-typedef void(*PFunc)(int*);
-
-void Result(int* num) {
+std::function<void(int)> Result = [](int num) {
 
 	int result = rand() % 11 + 2;
 
@@ -16,22 +15,23 @@ void Result(int* num) {
 		isEven = true;
 	}
 
-	if (isEven == false && *num == 1) {
+	if (isEven == false && num == 1) {
 		printf("%d‚Ì’š!‚ ‚È‚½‚ÌŸ‚¿‚Å‚·!\n", result);
 	}
-	else if (isEven && *num == 2) {
+	else if (isEven && num == 2) {
 		printf("%d‚Ì”¼!‚ ‚È‚½‚ÌŸ‚¿‚Å‚·!\n", result);
 	}
-	else if (*num == 1) {
+	else if (num == 1) {
 		printf("%d‚Ì”¼!‚ ‚È‚½‚Ì•‰‚¯‚Å‚·...\n", result);
 	}
-	else if (*num == 2) {
+	else if (num == 2) {
 		printf("%d‚Ì’š!‚ ‚È‚½‚Ì•‰‚¯‚Å‚·...\n", result);
 	}
 
-}
+};
 
-void setTimeout(PFunc p, int second, int num) {
+
+void setTimeout(int second, int num) {
 
 	int count = second;
 
@@ -48,7 +48,7 @@ void setTimeout(PFunc p, int second, int num) {
 
 	printf("\n");
 
-	p(&num);
+	Result(num);
 
 }
 
@@ -75,9 +75,8 @@ int main(void) {
 		printf("”¼‚ğ‘I‚Ñ‚Ü‚µ‚½!Œ‹‰Ê‚Í");
 	}
 
-	PFunc p;
-	p = Result;
-	setTimeout(p, 3, num);
+	
+	setTimeout(3, num);
 
 	return 0;
 }

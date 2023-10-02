@@ -3,19 +3,11 @@
 #include <stdlib.h>
 #include <Windows.h>
 
-typedef int(*PFunc)();
+typedef void(*PFunc)(int*);
 
-int Result() {
+void Result(int* num) {
 
-	return rand() % 11 + 2;
-
-}
-
-void setTimeout(PFunc p, int second, int num) {
-
-	Sleep(second * 1000);
-
-	int result = p();
+	int result = rand() % 11 + 2;
 
 	//丁か半かの判定
 	bool isEven = false;
@@ -24,18 +16,39 @@ void setTimeout(PFunc p, int second, int num) {
 		isEven = true;
 	}
 
-	if (isEven == false && num == 1) {
+	if (isEven == false && *num == 1) {
 		printf("%dの丁!あなたの勝ちです!\n", result);
 	}
-	else if (isEven && num == 2) {
+	else if (isEven && *num == 2) {
 		printf("%dの半!あなたの勝ちです!\n", result);
 	}
-	else if (num == 1) {
+	else if (*num == 1) {
 		printf("%dの半!あなたの負けです...\n", result);
 	}
-	else if (num == 2) {
+	else if (*num == 2) {
 		printf("%dの丁!あなたの負けです...\n", result);
 	}
+
+}
+
+void setTimeout(PFunc p, int second, int num) {
+
+	int count = second;
+
+	while (count != 0)
+	{
+
+		printf(".");
+
+		Sleep(1000);
+
+		count--;
+
+	}
+
+	printf("\n");
+
+	p(&num);
 
 }
 
@@ -56,10 +69,10 @@ int main(void) {
 	}
 
 	if (num == 1) {
-		printf("丁を選びました!結果は...\n");
+		printf("丁を選びました!結果は");
 	}
 	else {
-		printf("半を選びました!結果は...\n");
+		printf("半を選びました!結果は");
 	}
 
 	PFunc p;

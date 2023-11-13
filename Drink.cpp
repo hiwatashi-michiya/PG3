@@ -10,49 +10,49 @@ Drink::~Drink() {
 }
 
 Water::~Water() {
-	printf("%s‚ðˆù‚ÝŠ±‚µ‚½\n", name);
+	printf("%sã‚’é£²ã¿å¹²ã—ãŸ\n", name);
 }
 
 void Water::Order() {
 
-	name = "‚¨…";
+	name = "ãŠæ°´";
 
-	printf("%s‚ð’•¶‚µ‚½\n", name);
+	printf("%sã‚’æ³¨æ–‡ã—ãŸ\n", name);
 
 }
 
 Tea::~Tea() {
-	printf("%s‚ðˆù‚ÝŠ±‚µ‚½\n", name);
+	printf("%sã‚’é£²ã¿å¹²ã—ãŸ\n", name);
 }
 
 void Tea::Order() {
 
-	name = "g’ƒ";
+	name = "ç´…èŒ¶";
 
-	printf("%s‚ð’•¶‚µ‚½\n", name);
+	printf("%sã‚’æ³¨æ–‡ã—ãŸ\n", name);
 
 }
 
 OrangeJuice::~OrangeJuice() {
-	printf("%s‚ðˆù‚ÝŠ±‚µ‚½\n", name);
+	printf("%sã‚’é£²ã¿å¹²ã—ãŸ\n", name);
 }
 
 void OrangeJuice::Order() {
 
-	name = "ƒIƒŒƒ“ƒWƒWƒ…[ƒX";
+	name = "ã‚ªãƒ¬ãƒ³ã‚¸ã‚¸ãƒ¥ãƒ¼ã‚¹";
 
-	printf("%s‚ð’•¶‚µ‚½\n", name);
+	printf("%sã‚’æ³¨æ–‡ã—ãŸ\n", name);
 
 }
 
 Wine::~Wine() {
-	printf("%s‚ðˆù‚ÝŠ±‚µ‚½\n", name);
+	printf("%sã‚’é£²ã¿å¹²ã—ãŸ\n", name);
 }
 
 void Wine::Order() {
 
-	name = "ƒƒCƒ“";
+	name = "ãƒ¯ã‚¤ãƒ³";
 
-	printf("%s‚ð’•¶‚µ‚½\n", name);
+	printf("%sã‚’æ³¨æ–‡ã—ãŸ\n", name);
 
 }

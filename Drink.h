@@ -7,7 +7,7 @@ public:
 	Drink();
 	virtual ~Drink();
 
-	//ˆù‚İ•¨‚Ì’•¶
+	//é£²ã¿ç‰©ã®æ³¨æ–‡
 	virtual void Order() = 0;
 
 protected:

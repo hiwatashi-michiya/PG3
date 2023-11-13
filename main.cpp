@@ -3,7 +3,7 @@
 
 int main() {
 
-	//ˆù‚Ý•¨‚ÌƒCƒ“ƒXƒ^ƒ“ƒX
+	//é£²ã¿ç‰©ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹
 	Drink* drinks[4];
 
 	for (size_t i = 0; i < 4; i++) {
@@ -23,12 +23,12 @@ int main() {
 
 	}
 	
-	//ˆù‚Ý•¨‚ð’•¶
+	//é£²ã¿ç‰©ã‚’æ³¨æ–‡
 	for (size_t i = 0; i < 4; i++) {
 		drinks[i]->Order();
 	}
 
-	//ƒCƒ“ƒXƒ^ƒ“ƒX”jŠü
+	//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ç ´æ£„
 	for (size_t i = 0; i < 4; i++)
 	{
 		delete drinks[i];

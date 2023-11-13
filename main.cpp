@@ -10,12 +10,12 @@ int main() {
 	Calc<double, int> c5(23.4, 18);
 	Calc<double, float> c6(87.6, 76.5f);
 
-	printf("c1‚Ì¬‚³‚¢•û‚Ì’l : %d\n", c1.Min());
-	printf("c2‚Ì¬‚³‚¢•û‚Ì’l : %d\n", c2.Min());
-	printf("c3‚Ì¬‚³‚¢•û‚Ì’l : %f\n", c3.Min());
-	printf("c4‚Ì¬‚³‚¢•û‚Ì’l : %f\n", c4.Min());
-	printf("c5‚Ì¬‚³‚¢•û‚Ì’l : %lf\n", c5.Min());
-	printf("c6‚Ì¬‚³‚¢•û‚Ì’l : %lf\n", c6.Min());
+	printf("c1ã®å°ã•ã„æ–¹ã®å€¤ : %d\n", c1.Min());
+	printf("c2ã®å°ã•ã„æ–¹ã®å€¤ : %d\n", c2.Min());
+	printf("c3ã®å°ã•ã„æ–¹ã®å€¤ : %f\n", c3.Min());
+	printf("c4ã®å°ã•ã„æ–¹ã®å€¤ : %f\n", c4.Min());
+	printf("c5ã®å°ã•ã„æ–¹ã®å€¤ : %lf\n", c5.Min());
+	printf("c6ã®å°ã•ã„æ–¹ã®å€¤ : %lf\n", c6.Min());
 
 	return 0;
 

@@ -12,40 +12,7 @@ public:
 
 protected:
 
-	//ñ êœ
+	//Èù¢Á©ç
 	float area_;
-
-};
-
-class Circle : public IShape 
-{
-public:
-
-	Circle(float radius);
-
-	void Size() override;
-
-	void Draw() override;
-
-private:
-
-	float radius_;
-
-};
-
-class Rectangle : public IShape 
-{
-public:
-
-	Rectangle(float width, float height);
-
-	void Size() override;
-
-	void Draw() override;
-
-private:
-
-	float width_;
-	float height_;
 
 };

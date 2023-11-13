@@ -5,7 +5,5 @@ int main() {
 
 	SetConsoleOutputCP(65001);
 
-	printf("ニャー");
-
 	return 0;
 }

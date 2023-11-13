@@ -17,7 +17,7 @@ void Enemy::Update() {
 
 void Enemy::Strike() {
 
-	printf("‹ßÚUŒ‚\n");
+	printf("è¿‘æ¥æ”»æ’ƒ\n");
 
 	phase_ = PhaseShot;
 
@@ -25,7 +25,7 @@ void Enemy::Strike() {
 
 void Enemy::Shot() {
 
-	printf("ËŒ‚\n");
+	printf("å°„æ’ƒ\n");
 
 	phase_ = PhaseLeave;
 
@@ -33,7 +33,7 @@ void Enemy::Shot() {
 
 void Enemy::Leave() {
 
-	printf("—£’E\n");
+	printf("é›¢è„±\n");
 
 	phase_ = PhaseStrike;
 

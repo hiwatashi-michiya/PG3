@@ -13,16 +13,16 @@ public:
 		PhaseLeave
 	};
 
-	//XV
+	//æ›´æ–°
 	void Update();
 
-	//‹ßÚUŒ‚
+	//è¿‘æ¥æ”»æ’ƒ
 	void Strike();
 
-	//ËŒ‚
+	//å°„æ’ƒ
 	void Shot();
 
-	//—£’E
+	//é›¢è„±
 	void Leave();
 
 private:

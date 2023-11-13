@@ -8,7 +8,7 @@ std::function<void(int)> Result = [](int num) {
 
 	int result = rand() % 11 + 2;
 
-	//’š‚©”¼‚©‚Ì”»’è
+	//ä¸ã‹åŠã‹ã®åˆ¤å®š
 	bool isEven = false;
 
 	if (result % 2 == 0) {
@@ -16,16 +16,16 @@ std::function<void(int)> Result = [](int num) {
 	}
 
 	if (isEven == false && num == 1) {
-		printf("%d‚Ì’š!‚ ‚È‚½‚ÌŸ‚¿‚Å‚·!\n", result);
+		printf("%dã®ä¸!ã‚ãªãŸã®å‹ã¡ã§ã™!\n", result);
 	}
 	else if (isEven && num == 2) {
-		printf("%d‚Ì”¼!‚ ‚È‚½‚ÌŸ‚¿‚Å‚·!\n", result);
+		printf("%dã®åŠ!ã‚ãªãŸã®å‹ã¡ã§ã™!\n", result);
 	}
 	else if (num == 1) {
-		printf("%d‚Ì”¼!‚ ‚È‚½‚Ì•‰‚¯‚Å‚·...\n", result);
+		printf("%dã®åŠ!ã‚ãªãŸã®è² ã‘ã§ã™...\n", result);
 	}
 	else if (num == 2) {
-		printf("%d‚Ì’š!‚ ‚È‚½‚Ì•‰‚¯‚Å‚·...\n", result);
+		printf("%dã®ä¸!ã‚ãªãŸã®è² ã‘ã§ã™...\n", result);
 	}
 
 };
@@ -58,7 +58,7 @@ int main(void) {
 
 	int num = 0;
 
-	printf("’š”¼”‘Å!\n’š‚È‚ç1A”¼‚È‚ç2‚ğ‰Ÿ‚µ‚Ä‚­‚¾‚³‚¢\n");
+	printf("ä¸åŠåšæ‰“!\nä¸ãªã‚‰1ã€åŠãªã‚‰2ã‚’æŠ¼ã—ã¦ãã ã•ã„\n");
 	
 	while (num < 1 || 2 < num)
 	{
@@ -69,10 +69,10 @@ int main(void) {
 	}
 
 	if (num == 1) {
-		printf("’š‚ğ‘I‚Ñ‚Ü‚µ‚½!Œ‹‰Ê‚Í");
+		printf("ä¸ã‚’é¸ã³ã¾ã—ãŸ!çµæœã¯");
 	}
 	else {
-		printf("”¼‚ğ‘I‚Ñ‚Ü‚µ‚½!Œ‹‰Ê‚Í");
+		printf("åŠã‚’é¸ã³ã¾ã—ãŸ!çµæœã¯");
 	}
 
 	

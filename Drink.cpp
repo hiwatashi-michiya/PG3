@@ -17,7 +17,7 @@ void Water::Order() {
 
 	name = "お水";
 
-	printf("%sを注文した\n", name);
+	printf("%sを注文した。のどが潤った。\n", name);
 
 }
 
@@ -29,7 +29,7 @@ void Tea::Order() {
 
 	name = "紅茶";
 
-	printf("%sを注文した\n", name);
+	printf("%sを注文した。良い香りだ。\n", name);
 
 }
 
@@ -41,7 +41,7 @@ void OrangeJuice::Order() {
 
 	name = "オレンジジュース";
 
-	printf("%sを注文した\n", name);
+	printf("%sを注文した。甘い。\n", name);
 
 }
 
@@ -53,6 +53,6 @@ void Wine::Order() {
 
 	name = "ワイン";
 
-	printf("%sを注文した\n", name);
+	printf("%sを注文した。渋みがある。\n", name);
 
 }

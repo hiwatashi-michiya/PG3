@@ -143,9 +143,17 @@
   <ItemGroup>
     <ClCompile Include="Drink.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="OrangeJuice.cpp" />
+    <ClCompile Include="Tea.cpp" />
+    <ClCompile Include="Water.cpp" />
+    <ClCompile Include="Wine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Drink.h" />
+    <ClInclude Include="OrangeJuice.h" />
+    <ClInclude Include="Tea.h" />
+    <ClInclude Include="Water.h" />
+    <ClInclude Include="Wine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

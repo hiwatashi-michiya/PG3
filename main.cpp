@@ -31,7 +31,7 @@ std::function<void(int)> Result = [](int num) {
 
 };
 
-std::function<void(int, int)> SetTimeout = [](int second, int num) {
+std::function<void(std::function<void(void)>, int)> SetTimeout = [](std::function<void(void)> func, int second) {
 
 	int count = second;
 
@@ -48,7 +48,7 @@ std::function<void(int, int)> SetTimeout = [](int second, int num) {
 
 	printf("\n");
 
-	Result(num);
+	func();
 
 };
 
@@ -75,7 +75,11 @@ int main(void) {
 		printf("半を選びました!結果は");
 	}
 
-	SetTimeout(3, num);
+	std::function<void(void)> result = [&]() {
+		Result(num);
+	};
+
+	SetTimeout(result, 3);
 
 	return 0;
 }

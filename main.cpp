@@ -6,8 +6,6 @@ using namespace std;
 
 int main() {
 
-	SetConsoleOutputCP(65001);
-
 	list<const char*> yamanoteLine{
 		"Tokyo",
 		"Kanda",
@@ -41,7 +39,43 @@ int main() {
 		"Yurakucho"
 	};
 
-	cout << "1970年\n";
+	cout << "1970年の山手線の駅一覧\n";
+
+	for (auto it = yamanoteLine.begin(); it != yamanoteLine.end(); it++) {
+
+		cout << *it;
+		cout << "\n";
+
+	}
+
+	cout << "2019年の山手線の駅一覧(西日暮里追加)\n";
+
+	for (auto it = yamanoteLine.begin(); it != yamanoteLine.end(); it++) {
+
+		if (*it == "Tabata") {
+			it = yamanoteLine.insert(it, "Nishi-Nippori");
+			break;
+		}
+
+	}
+
+	for (auto it = yamanoteLine.begin(); it != yamanoteLine.end(); it++) {
+
+		cout << *it;
+		cout << "\n";
+
+	}
+
+	cout << "2022年の山手線の駅一覧(高輪ゲートウェイ追加)\n";
+
+	for (auto it = yamanoteLine.begin(); it != yamanoteLine.end(); it++) {
+
+		if (*it == "Tamachi") {
+			it = yamanoteLine.insert(it, "Takanawa Gateway");
+			break;
+		}
+
+	}
 
 	for (auto it = yamanoteLine.begin(); it != yamanoteLine.end(); it++) {
 

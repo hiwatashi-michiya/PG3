@@ -3,29 +3,21 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
-using namespace std;
+#include <string>
 
-void Sort(std::vector<const char*>& studentsVector) {
+bool CompareId(const std::string& strA, const std::string& strB) {
 
-	for (uint32_t i = 0; i < studentsVector.size() - 1; i++) {
+	int numStrA = std::stoi(strA.substr(1, 3) + strA.substr(5, 4));
 
-		if (studentsVector[i + 1] > studentsVector[i]) {
+	int numStrB = std::stoi(strB.substr(1, 3) + strB.substr(5, 4));
 
-			const char* tmpChar = studentsVector[i];
-
-			studentsVector[i] = studentsVector[i + 1];
-
-			studentsVector[i + 1] = tmpChar;
-
-		}
-
-	}
+	return numStrA < numStrB;
 
 }
 
 int main() {
 
-	std::vector<const char*> students{ 
+	std::vector<std::string> students{ 
 		"k022g0108@g.neec.ac.jp",
 		"k022g0045@g.neec.ac.jp",
 		"k022g0007@g.neec.ac.jp",
@@ -144,19 +136,19 @@ int main() {
 		"k022g0012@g.neec.ac.jp",
 		"k022g0001@g.neec.ac.jp"};
 
-		cout << "全ての要素を表示" << endl;
+		std::cout << "全ての要素を表示" << std::endl;
 
 		for (uint32_t i = 0; i < students.size(); i++) {
-			cout << students[i] << endl;
+			std::cout << students[i] << std::endl;
 		}
 
 		//昇順に並べ替え
-		Sort(students);
+		std::sort(students.begin(), students.end(), CompareId);
 
-		cout << "全ての要素を昇順に並べ替えて表示" << endl;
+		std::cout << "全ての要素を昇順に並べ替えて表示" << std::endl;
 
 		for (uint32_t i = 0; i < students.size(); i++) {
-			cout << students[i] << endl;
+			std::cout << students[i] << std::endl;
 		}
 
 	return 0;
